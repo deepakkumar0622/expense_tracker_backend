@@ -19,7 +19,7 @@ app.get("/api/health", (req, res) => {
 //To accept the json req/res body
 app.use(express.json());
 
-// Middle ware
+// Middleware
 app.use(ratelimiter);
 
 // Routes
