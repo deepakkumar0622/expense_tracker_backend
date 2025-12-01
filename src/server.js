@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// for scheduling job
+// for scheduling job & for production only
 if (process.env.NODE_ENV === "production") job.start();
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "ok" });
